@@ -35,6 +35,31 @@ PROJECT_NAME := app-template
 include $(IDF_PATH)/make/project.mk
 ```
 
+1.1.4 สร้างไฟล์ใหม่ ตั้งชื่อ CMakeLists.txt และเพิ่มเนื้อหาดังนี้
+
+![image](https://github.com/user-attachments/assets/c137058a-5843-4afa-8d71-d2ec0c124659)
+
+
+``` cpp
+# The following lines of boilerplate have to be in your project's
+# CMakeLists in this exact order for cmake to work correctly
+cmake_minimum_required(VERSION 3.5)
+
+include($ENV{IDF_PATH}/tools/cmake/project.cmake)
+project(app-template)
+```
+
+1.2. สร้าง folder สำหรับ component Main
+
+![image](https://github.com/user-attachments/assets/dbbc4da8-68f4-471e-a3b2-c5c0ba739896)
+
+
+
+
+
+
+
+
 
 Build และทดสอบบนบอร์ด ESP32
 
