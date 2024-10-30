@@ -161,7 +161,10 @@ void app_main(void)
 
 ``` 
 
+![image](https://github.com/user-attachments/assets/c834c66b-aabe-4064-b060-e10f880a608a)
 
+
+![image](https://github.com/user-attachments/assets/b0760f7d-f536-43f0-8826-70310223de52)
 
 
 Build และทดสอบบนบอร์ด ESP32
@@ -169,8 +172,7 @@ Build และทดสอบบนบอร์ด ESP32
 
 ผลลัพน์คือ
 
-
-วิดิโอประกอบ
+รูปประกอบ
 
 
 สรุปผล:
