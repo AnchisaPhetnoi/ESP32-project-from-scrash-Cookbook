@@ -172,6 +172,7 @@ Build และทดสอบบนบอร์ด ESP32
 
 ผลลัพน์คือ
 
+
 รูปประกอบ
 
 
@@ -179,7 +180,7 @@ Build และทดสอบบนบอร์ด ESP32
 
 
 
-ลิงค์ Project ที่ทำบน VS code :
+ลิงค์ Project ที่ทำบน VS code : https://github.com/AnchisaPhetnoi/ESP32_Blank_.git
 
 
 
