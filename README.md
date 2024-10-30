@@ -68,7 +68,104 @@ set(COMPONENT_ADD_INCLUDEDIRS "")
 register_component()
 ```
 
+1.1.6 เพิ่มไฟล์ main.c
 
+![image](https://github.com/user-attachments/assets/6e8f3999-e34d-46b5-b435-e3d41fc35355)
+
+![image](https://github.com/user-attachments/assets/70772c2a-7e1a-416f-8511-e58b16de2155)
+
+``` cpp
+#include <stdio.h>
+#include "freertos/FreeRTOS.h"
+#include "freertos/task.h"
+#include "driver/gpio.h"
+
+#include "driver/gpio.h"
+
+#include "driver/adc.h"
+
+void app_main(void)
+{
+    gpio_set_direction(5, GPIO_MODE_OUTPUT);  // LED 1
+    gpio_set_direction(GPIO_NUM_17, GPIO_MODE_INPUT); // Button 2
+    int button2 = 0;
+    int ledState = 0;
+
+    while (1) {
+        button2 = gpio_get_level(GPIO_NUM_17);
+        
+        if (button2 == 1)
+        {
+            ledState = !ledState; // สลับสถานะ LED
+            gpio_set_level(5, ledState); // ตั้งค่า LED ตามสถานะ
+            printf("LED State = %d\n", ledState);
+            vTaskDelay(1000 / portTICK_PERIOD_MS); // หยุดรอ 1 วินาทีเพื่อหลีกเลี่ยงการกดซ้ำ
+        }
+
+        vTaskDelay(100 / portTICK_PERIOD_MS);
+    }
+}
+```
+
+![image](https://github.com/user-attachments/assets/8ca91324-d2ed-48b4-8c61-85e94a380882)
+
+
+ผลลัพน์ที่แสดงคือ 
+
+
+วิดิโอประกอบ
+
+
+
+1.1.7 เพิ่มไฟล์ main.c
+
+![image](https://github.com/user-attachments/assets/02a7c262-ec78-463b-a4c3-7152e6eff8e0)
+
+
+
+![image](https://github.com/user-attachments/assets/672176ca-5cd1-402e-9ca3-dce22c676a8b)
+
+
+``` cpp
+#include <stdio.h>
+#include "freertos/FreeRTOS.h"
+#include "freertos/task.h"
+#include "driver/gpio.h"
+
+#include "driver/gpio.h"
+
+#include "driver/adc.h"
+
+void app_main(void)
+{
+    gpio_set_direction(5, GPIO_MODE_OUTPUT);  // LED 1
+    gpio_set_direction(GPIO_NUM_17, GPIO_MODE_INPUT); // Button 2
+    int button2 = 0;
+    int pressCount = 0;
+
+    while (1) {
+        button2 = gpio_get_level(GPIO_NUM_17);
+        
+        if (button2 == 1)
+        {
+            gpio_set_level(5, 1); // LED ON
+            pressCount++; // เพิ่มนับจำนวนการกด
+            printf("Button pressed %d times\n", pressCount);
+            vTaskDelay(1000 / portTICK_PERIOD_MS); // หยุดรอ 1 วินาทีเพื่อหลีกเลี่ยงการนับซ้ำ
+        }
+        else
+        {
+            gpio_set_level(5, 0); // LED OFF
+        }
+
+        vTaskDelay(100 / portTICK_PERIOD_MS);
+    }
+}
+
+``` 
+
+
+![image](https://github.com/user-attachments/assets/3abb5a85-9725-4aac-97d0-cfa2ac50508a)
 
 
 Build และทดสอบบนบอร์ด ESP32
