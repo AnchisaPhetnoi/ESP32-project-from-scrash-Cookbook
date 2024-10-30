@@ -49,14 +49,24 @@ include($ENV{IDF_PATH}/tools/cmake/project.cmake)
 project(app-template)
 ```
 
-1.2. สร้าง folder สำหรับ component Main
+1.1.5 เพิ่มไฟล์ CMakeLists.txt ในโผลเดอร์ main
 
-![image](https://github.com/user-attachments/assets/dbbc4da8-68f4-471e-a3b2-c5c0ba739896)
-
-
+![image](https://github.com/user-attachments/assets/30ff0e67-041c-401f-89ff-e3c85e9d9bd7)
 
 
+``` cpp
+# Edit following two lines to set component requirements (see docs)
+set(COMPONENT_REQUIRES driver)
+set(COMPONENT_PRIV_REQUIRES )
 
+set(COMPONENT_SRCS 
+"LED.c"
+"main.c"
+)
+set(COMPONENT_ADD_INCLUDEDIRS "")
+
+register_component()
+```
 
 
 
