@@ -13,7 +13,6 @@
 ![image](https://github.com/user-attachments/assets/f0658806-064e-40e1-8eb9-7ad114fd5ae5)
 
 
-![image](https://github.com/user-attachments/assets/3a982e33-0624-4077-9494-5863f018695c)
 
 1.1.2 browse ไปที่ folder ที่จะเก็บโปรเจค แล้วสร้าง folder ใหม่ ในที่นี้ชื่อ ESP32_Blank
 
