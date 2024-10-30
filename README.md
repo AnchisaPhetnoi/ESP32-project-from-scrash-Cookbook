@@ -123,9 +123,6 @@ void app_main(void)
 
 
 
-![image](https://github.com/user-attachments/assets/672176ca-5cd1-402e-9ca3-dce22c676a8b)
-
-
 ``` cpp
 #include <stdio.h>
 #include "freertos/FreeRTOS.h"
@@ -165,7 +162,6 @@ void app_main(void)
 ``` 
 
 
-![image](https://github.com/user-attachments/assets/3abb5a85-9725-4aac-97d0-cfa2ac50508a)
 
 
 Build และทดสอบบนบอร์ด ESP32
