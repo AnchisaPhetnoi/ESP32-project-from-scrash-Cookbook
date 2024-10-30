@@ -49,7 +49,7 @@ include($ENV{IDF_PATH}/tools/cmake/project.cmake)
 project(app-template)
 ```
 
-1.1.5 เพิ่มไฟล์ CMakeLists.txt ในโผลเดอร์ main
+1.1.5 เพิ่มไฟล์ CMakeLists.txt ในโฟลเดอร์ main
 
 ![image](https://github.com/user-attachments/assets/30ff0e67-041c-401f-89ff-e3c85e9d9bd7)
 
